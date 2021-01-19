@@ -1,0 +1,30 @@
+{
+  "name": "3d_space_pursuit_simulation",
+  "version": "1.0.0",
+  "description": "3D space fight simulation",
+  "main": "index.js",
+  "dependencies": {
+    "@babylonjs/core": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/babylonjs": "^2.4.1",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bionboy/3d_space_pursuit_simulation.git"
+  },
+  "author": "Luke Floden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bionboy/3d_space_pursuit_simulation/issues"
+  },
+  "homepage": "https://github.com/bionboy/3d_space_pursuit_simulation#readme"
+}
