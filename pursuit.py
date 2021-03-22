@@ -4,17 +4,9 @@ import math
 from dataclasses import dataclass
 from enum import Enum
 from typing import List
-
 import numpy as np
-from numpy.lib.histograms import histogram
-from numpy.random import rand
-
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from mpl_toolkits import mplot3d
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.collections as mcoll
-import matplotlib.path as mpath
 
 
 class CraftMode(Enum):
@@ -45,9 +37,6 @@ class Vec3:
                 other.x - self.x,
                 other.y - self.y,
                 other.z - self.z,
-                # self.x - other.x,
-                # self.y - other.y,
-                # self.z - other.z,
             ],
             dtype=float,
         )
@@ -108,7 +97,6 @@ class Craft:
 
         if self.mode == CraftMode.neutral:
 
-            # TODO: make path following have orientation
             # normal = self.pos.normal(self.pos + self.path)
             # desiredUpdate = self.orientation.normal(normal)
             # actualUpdate = desiredUpdate * 0.3
@@ -124,11 +112,7 @@ class Craft:
                 # r = lambda: self.speed * (1 - rand())
                 # self.pathUpdate = Vec3(r(), r(), r())
                 self.pathUpdate = Vec3() - self.pathUpdate
-                # self.path.x = -5
-                # self.path.y = -3
-                # self.path.z = -1
 
-            # p()
             return
 
         # positions = [c.pos for c in crafts]
@@ -172,7 +156,6 @@ class Craft:
             # TODO: Avoid nearest craft
             raise NotImplementedError
 
-        # p()
 
     def __str__(self) -> str:
         return f"Pos: {self.pos},\tOri: {self.orientation}"
@@ -260,7 +243,6 @@ def simulation(
 
 
 if __name__ == "__main__":
-    # todo: change these values
     simulation(
         alpha=0.1,
         beta=10,
